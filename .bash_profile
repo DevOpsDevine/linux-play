@@ -4,11 +4,14 @@ export SENCHA_SDK_TOOLS_2_0_0_BETA3="/Applications/SenchaSDKTools-2.0.0-beta3"
 export SOURCEDIR=~/src
 export PRIVATESOURCEDIR=~/DevOpsDevinesrc
 export OPSCODE_USER=mdevine-daptiv
+export EDITOR=/Applications/TextMate.app/Contents/MacOS
+export gh_email=DevOpsDevine@gmail.com
+export gh_password=i7F2OCrPcFOc
 
 source /usr/local/bin/git-completion.sh
 source /usr/local/bin/git-prompt.sh
 
-PS1='\e[0;32m\w\e[m\e[0;33m$(__git_ps1 " (%s)")\e[0;32m\n\$\e[m '
+#PS1='\e[0;32m\w\e[m\e[0;33m$(__git_ps1 " (%s)")\e[0;32m\n\$\e[m '
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 tabname () { printf "\e]1;$1\a"; }
@@ -16,20 +19,21 @@ tabname () { printf "\e]1;$1\a"; }
 #navigation
 alias src="cd ${SOURCEDIR}"
 alias psrc="cd ${PRIVATESOURCEDIR}"
-alias ppm="cd ${SOURCEDIR}/Ppm"
-alias osx="cd ${SOURCEDIR}/OS-X-Workstation"
-alias ppmlib="cd ${SOURCEDIR}/PpmLib"
-alias site="cd ${SOURCEDIR}/daptiv_site"
-alias winsetup="cd ${SOURCEDIR}/daptiv_winsetup"
-alias ppmapp="cd ${SOURCEDIR}/PpmApp"
+
+alias berkshelf="cd ${HOME}/.berkshelf/cookbooks"
 alias chefrepo="cd ${SOURCEDIR}/chef-repo"
 alias cookbooks="cd ${SOURCEDIR}/chef-repo/cookbooks"
-alias berkshelf="cd ${HOME}/.berkshelf/cookbooks"
-
+alias dev="cd ${SOURCEDIR}/daptiv_dev_ppm_workstation"
+alias ppm="cd ${SOURCEDIR}/Ppm"
+alias ppmapp="cd ${SOURCEDIR}/PpmApp"
+alias ppmlib="cd ${SOURCEDIR}/PpmLib"
+alias osx="cd ${SOURCEDIR}/OS-X-Workstation"
+alias site="cd ${SOURCEDIR}/daptiv_site"
+alias winsetup="cd ${SOURCEDIR}/daptiv_winsetup"
+ 
 #execution shortcuts
 alias be="bundle exec"
-alias bslv="be berks update&&be berks install --path ${SOURCEDIR}/chef-repo/cookbooks"
-alias bsv="chefrepo&&bslv&&cd -"
+alias bsv="be berks update&&be berks install --path ${SOURCEDIR}/chef-repo/cookbooks"
 
 alias gstat="git status"
 alias gdiff="git diff"
@@ -40,6 +44,8 @@ alias gpush="git push origin head"
 alias gpull="git pull"
 alias gprune="git fetch -p"
 
+alias vinf="VAGRANT_LOG=INFO"
+alias vdbg="VAGRANT_LOG=DEBUG"
 alias vstat="vagrant status"
 alias vup="vagrant up"
 alias vpro="vagrant provision"
