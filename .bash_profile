@@ -4,9 +4,8 @@ export SENCHA_SDK_TOOLS_2_0_0_BETA3="/Applications/SenchaSDKTools-2.0.0-beta3"
 export SOURCEDIR=~/src
 export PRIVATESOURCEDIR=~/DevOpsDevinesrc
 export OPSCODE_USER=mdevine-daptiv
-export EDITOR=/Applications/TextMate.app/Contents/MacOS
 export gh_email=DevOpsDevine@gmail.com
-export gh_password=i7F2OCrPcFOc
+export gh_password=
 
 source /usr/local/bin/git-completion.sh
 source /usr/local/bin/git-prompt.sh
